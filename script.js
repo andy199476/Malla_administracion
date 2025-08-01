@@ -114,7 +114,3 @@ function renderMalla() {
 }
 
 renderMalla();
-
-
-renderMalla();
-
