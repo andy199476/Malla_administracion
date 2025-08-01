@@ -1,55 +1,62 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f1f5f9;
+  background-color: #f4f6f9;
   margin: 0;
   padding: 20px;
-  color: #1e293b;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
-  color: #0f172a;
+  color: #333;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  max-width: 1400px;
-  margin: 0 auto;
+.contenedor-malla {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.columna-cuatrimestre {
+  flex: 0 0 220px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.columna-cuatrimestre h2 {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #0077aa;
 }
 
 .materia {
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #e2e8f0;
-  border: 2px solid #cbd5e1;
+  background-color: #e1ecf4;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 6px 0;
   cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.2s;
 }
 
 .materia:hover {
-  background-color: #dbeafe;
-}
-
-.materia.bloqueada {
-  background-color: #f8fafc;
-  color: #94a3b8;
-  border: 2px dashed #cbd5e1;
-  cursor: not-allowed;
+  background-color: #cbe4f6;
 }
 
 .materia.aprobada {
-  background-color: #86efac;
-  border-color: #22c55e;
-  color: #14532d;
+  background-color: #b9eacb;
+  text-decoration: line-through;
+  color: #555;
 }
 
-.cuatrimestre {
-  font-weight: bold;
-  font-size: 0.9em;
-  color: #475569;
-  margin-top: 5px;
+.materia.bloqueada {
+  background-color: #eeeeee;
+  color: #999;
+  cursor: not-allowed;
 }
 
